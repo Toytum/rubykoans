@@ -14,7 +14,12 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  if a <= 0 || b <= 0 || c <= 0 then
+
+  sum = (a + b + c) / 2.0
+
+  verifer = (sum-a)*(sum-b)*(sum-c)
+
+  if a <= 0 || b <= 0 || c <= 0 || verifer <= 0 then
     raise TriangleError
   end
 
